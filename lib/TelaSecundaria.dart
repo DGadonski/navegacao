@@ -1,9 +1,12 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, must_be_immutable, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
 class TelaSecundaria extends StatefulWidget {
-  const TelaSecundaria({super.key});
+  
+  String? valor;
+
+  TelaSecundaria({this.valor});
 
   @override
   State<TelaSecundaria> createState() => _TelaSecundariaState();
@@ -21,7 +24,7 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
         padding: EdgeInsets.all(32),
         child: Column(
           children: [
-            Text('Segunda tela!!!')
+            Text('Segunda tela!!! Valor ${widget.valor}')
           ],
         ),
       ),
